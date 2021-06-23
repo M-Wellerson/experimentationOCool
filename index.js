@@ -82,7 +82,7 @@ window.addEventListener('mousemove', (event) => {
 
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-renderer.setClearColor( 0xffffff);
+renderer.setClearColor( 0xd0d0d0 );
 const clock = new THREE.Clock();
 //animation
 ( function tick() {
