@@ -82,10 +82,12 @@ window.addEventListener('mousemove', (event) => {
 
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
+const clock = new THREE.Clock();
 //animation
 ( function tick() {
     controls.update();
+    const elapsedTime = clock.getElapsedTime();
+    group.rotation.y  = elapsedTime - 1 * Math.PI * 2;
 
     renderer.render(scene, camera);
     window.requestAnimationFrame(tick);
