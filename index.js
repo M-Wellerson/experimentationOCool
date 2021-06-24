@@ -10,6 +10,9 @@ const canvas = document.querySelector('.canvas');
 
 const textureLoader = new THREE.TextureLoader();
 const colortexture  = textureLoader.load('https://raw.githubusercontent.com/M-Wellerson/experimentationOCool/master/color.jpg');
+colortexture.generateMipmaps = false;
+colortexture.minFilter       = THREE.NearestFilter;
+colortexture.magFilter       = THREE.NearestFilter;
 
 //object
 const group = new THREE.Group();
